@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="145" viewBox="0 0 165 145">
+  <defs>
+    <linearGradient id="comet-a" x1="98.055%" x2="3.907%" y1="7.511%" y2="95.617%">
+      <stop offset="0%" stop-color="#62B9F7" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#E0F7B6"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#comet-a)" fill-rule="evenodd" d="M535,446 C538.681898,446 544.181898,442.666667 551.5,436 L689.5,316.87715 L689.5,301 C677.709611,309.992268 665.693325,319.237155 653.451144,328.73466 C625.297173,350.576557 585.813459,381.79072 535,422.37715 C528.333333,427.777152 525,432.318102 525,436 C525,441.522847 529.477153,446 535,446 Z" transform="translate(-525 -301)"/>
+</svg>
