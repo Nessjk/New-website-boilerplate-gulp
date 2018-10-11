@@ -5,8 +5,9 @@
 h1 {
   // Grows more quickly,
   // allowing for wider variation on larger screens
-  font-size: calc(3rem + 1.5vw);
+  font-size: 42px;
   color: $dark-text;
+  margin-bottom: 56px;
 }
 
 h2 {
@@ -16,7 +17,7 @@ h2 {
 }
 
 // Depens on the Typography chosen
-h1, h2 {
+h1 {
   font-weight: bold;
 }
 

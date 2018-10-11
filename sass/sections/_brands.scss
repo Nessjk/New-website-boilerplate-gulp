@@ -1,0 +1,48 @@
+.Brands {
+    min-height: 132px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    //box-shadow: 0 2px 10px rgba(4,8,40,.08);
+    
+    & h2 {
+        margin: auto 0;
+        font-size: 16px;
+        color: #2D3458;
+        text-align: center;
+
+        // @include mq('tablet', max) {
+        //     text-align: center;
+        //     padding:20px;
+        // }
+    }
+
+    &__logos ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 0!important;
+            flex-wrap: wrap;
+
+            & > li {
+                padding: 15px;
+                transition: all .15s ease-in-out;
+                filter: grayscale(100%);
+                opacity: 0.5;
+                transform: scale(0.98);
+            }
+
+            & img {
+                width: 160px;
+                height: 55px;
+            }
+
+            & li:hover {
+                filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                opacity: 1;
+                transform: scale(1);
+            }
+    }
+}

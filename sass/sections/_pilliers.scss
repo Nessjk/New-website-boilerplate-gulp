@@ -1,3 +1,66 @@
 .pilliers {
     background-color: #2D3458;
+    text-align: center;
+    padding-top: 72px;
+    padding-bottom: 96px;
+
+    @media (min-width: 575px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    & h1 {
+        color: white;
+        margin-bottom: 96px;
+    }
+}
+
+.pillier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__shapes {
+        height: 185px;
+        width: 185px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        color: white;
+        margin-top: 32px;
+    }
+
+    & .shape--1 {
+        background-color: #879BFF;
+        height: 124px;
+        width: 104px;
+        border-radius: 34px;
+        z-index: 99;
+        position: relative;
+    }
+    & .shape--2 {
+        background-color: #424969;
+        height: 124px;
+        width: 124px;
+        transform: rotate(45deg);
+        border-radius: 34px;
+        margin-top: 34px;
+        z-index: 9;
+        position: absolute;
+    }
+}
+
+.w-three {
+    width: calc(33.333% - 10px);
+
+    @media (max-width: 575px) {
+        width: 100%;
+    }
+ }
+
+.w-two {
+    width: calc(50% - 10px);
 }

@@ -19,6 +19,13 @@
     }
   }
 }
+
+.hero--h1 {
+  font-size: 64px;
+  color: white;
+}
+
+
 /* --------
 Moon layers
 -------- */
@@ -73,7 +80,7 @@ Paralax effect with depth
   top: 100%;
   left: 0;
   right: 0;
-  height: 100vh;
+  min-height: 115vh;
   z-index: 9999;
 }
 
@@ -116,6 +123,10 @@ Shooting Stars
   height: auto;
   position: absolute;
   z-index: -9;
+  opacity: 0;
+}
+
+.animateStar {
   animation: particleAnimation 3s ease-in-out infinite;
 }
 
@@ -140,6 +151,13 @@ Shooting Stars
 /* --------
 Presentation
 -------- */
-.presentation {
+.Presentation {
   position: relative;
+  margin-top: 200px;
+  text-align: center;
+}
+
+.playIcon {
+  margin-top: 200px;
+  margin-bottom: 200px;
 }

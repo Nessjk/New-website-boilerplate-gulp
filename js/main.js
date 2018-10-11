@@ -1,46 +1,41 @@
+var shoot = document.querySelectorAll('.shooting--star');
 
-var hero = document.getElementById('hero');
-// Height Variables
-var windowHeight = window.innerHeight;
-var scrollArea = 200 - windowHeight;
+function randomInt(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
-// Set Hero height to 100vh
-var heroHeight = hero.offsetHeight;
+function firstShooting() {
+  setTimeout(() => {
+    shoot.forEach(star => star.classList.add('animateStar'))
 
-window.addEventListener('scroll', function() {
-    var scrollTop = window.pageYOffset || window.scrollTop;
-    var scrollPercent = scrollTop/scrollArea || 0;
-    // if(scrollPercent >= 4.1379310344827585) {
-    //     scrollPercent = 4.1379310344827585;
-    // } else {
-    //   scrollPercent = scrollTop/scrollArea || 0;
-    // }
+    setTimeout(() => {
+      shoot.forEach(star => star.classList.remove('animateStar'))
+      randomShootings();
+    }, 3000);
+  }, 1000);
+}
+
+function randomShootings() {
+  setInterval(function(){ 
+    var randomNumber = this.randomInt(0, 3);
+    //console.log(randomNumber);
   
-    // height of hero - height of actual element to avoid the jump - scroll
-    // square1.style.top = heroHeight - 111 - (scrollPercent*window.innerWidth/120) + 'px';
-    // square2.style.top = heroHeight - 140 - (scrollPercent*window.innerWidth/60) + 'px';
-    // square3.style.top = heroHeight - 137 - (scrollPercent*window.innerWidth/35) + 'px';
-    //hero.style.height =   heroHeight/2 - (scrollPercent*30) + 'px';
-  
-    // Set Hero section to 100vh then on scroll switch to auto
-    // allow Hero height to reduce in size
-    //hero.style.minHeight = "auto";
-  
-    console.log(scrollPercent);
-  });
+    if(this.shoot[randomNumber].classList.contains('animateStar')){
+      return;
 
-  var hero = document.querySelector('.hero__content h1');
+    } else {
+      this.shoot[randomNumber].classList.add('animateStar');
 
-  var viewportOffset = hero.getBoundingClientRect();
-  // these are relative to the viewport, i.e. the window
-  var top = viewportOffset.top;
+      setTimeout(() => {
+        this.shoot[randomNumber].classList.remove('animateStar')
+      }, 3000);
 
-  window.addEventListener('scroll', function() {
-    console.log(viewportOffset);
-    console.log(top);
-  });
- 
+    }
 
-  window.addEventListener('scroll', function() {
-    //console.log( her + 'px');
-  });
+  }, 3000);
+}
+
+firstShooting();
+
+
+//console.log(randomInt(0,4));
