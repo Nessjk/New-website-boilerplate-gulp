@@ -21,3 +21,8 @@ body {
   // (half the rate of screen growth)
   font-size: calc(1.5rem + 0.5vw);
 }
+
+section {
+  min-height: 800px;
+}
+

@@ -1,49 +1,39 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+@media (min-width: 1200px) {
 
+  .hero__content {
+    color: white;
+    position: absolute;
+    top: 0;
+    max-width: 1140px;
+    display: flex;
+    margin: auto;
+    line-height: 60px;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
 
-section {
-  min-height: 800px;
-}
-
-
-
-  @media (min-width: 1200px) {
-
-    
-
-    
-    .hero__content {
+    & h1 {
       color: white;
-      position: absolute;
-      top: 0;
-      max-width: 1140px;
-      display: flex;
-      margin: auto;
-      line-height: 60px;
-      align-content: center;
-      align-items: center;
-      height: 100vh;
-
-      & h1 {
-        color: white;
-        position: relative; 
-        left: 20%;
-      }
+      position: relative;
+      left: 20%;
     }
   }
-
+}
+/* --------
+Moon layers
+-------- */
 .moon-layer--1 {
   z-index: 9999;
 }
+
 .moon-layer--2 {
   z-index: 999;
 }
+
 .moon-layer--3 {
   z-index: 99;
 }
+
 .moon-layer--4 {
   z-index: 9;
 }
@@ -52,36 +42,31 @@ section {
   overflow: hidden;
 }
 
+/* --------
+Paralax effect with depth
+-------- */
 .parallax {
-    perspective: 100px;
-    background-color: #2D3458;
-    height: 100vh;
-    overflow-x: hidden;
+  perspective: 100px;
+  background-color: #2D3458;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-.sky--stars {
-  height: 140vh;
-  width: 120vw;
-  //animation: spin 200s linear infinite, flickerAnimation 12s infinite, translateXY 6s infinite;
-  animation: slideIn 200s linear infinite, flickerAnimation 12s infinite;
-}
-
-
-.parallax__layer{
+.parallax__layer {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  
-  svg{
+
+  svg {
     display: block;
     position: absolute;
     bottom: 0;
   }
 }
 
-.parallax__cover{
+.parallax__cover {
   background-color: #F9FAFF;
   display: block;
   position: absolute;
@@ -96,8 +81,9 @@ $parallax__layers: 5;
 
 @for $i from 0 through $parallax__layers {
   $x: ($parallax__layers - $i) / 2;
-  .parallax__layer__#{$i}{
-     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+
+  .parallax__layer__#{$i} {
+    transform: translateZ(-100 * $x#{px}) scale($x + 1);
   }
 }
 
@@ -105,45 +91,55 @@ $parallax__layers: 5;
   transform: translateZ(-250px) scale(4.5);
 }
 
+/* --------
+Sky stars
+-------- */
+.sky--stars {
+  height: 140vh;
+  width: 120vw;
+  animation: slideIn 200s linear infinite, flickerAnimation 12s infinite;
+}
+
+/* --------
+Shooting Stars
+-------- */
 .shootingStars {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  z-index: -9;
 }
 
-
-.shooting--star{
-  top: 0; 
+.shooting--star {
+  top: 0;
   right: 0;
   height: auto;
   position: absolute;
+  z-index: -9;
   animation: particleAnimation 3s ease-in-out infinite;
 }
 
 .shooting--star__2 {
-    right: 200px;
-    height: 80px;
-    width: 80px;
+  right: 200px;
+  height: 80px;
+  width: 80px;
 }
 
 .shooting--star__3 {
-    right: 400px;
-    height: 120px;
-    width: 120px;
+  right: 400px;
+  height: 120px;
+  width: 120px;
 }
 
 .shooting--star__4 {
-    right: 700px;
-    height: 40px;
-    width: 40px;
+  right: 700px;
+  height: 40px;
+  width: 40px;
 }
 
-.cover-layer {
-  background-color: white;
+/* --------
+Presentation
+-------- */
+.presentation {
   position: relative;
-  bottom:-482px;
-  width: 100vw; 
-  height:450px;
-  background-color: blue;
-  z-index: 9999!important;
 }
